@@ -4,7 +4,7 @@ describe('My Second Test Suite', function()
 {
 
 it('My FirstTest case',function() {
-
+test1234567890
 console.log("starting text")
 cy.visit("https://rahulshettyacademy.com")
 cy.get('.search-keyword').type('ca')
