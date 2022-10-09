@@ -9,6 +9,7 @@ it('My FirstTest case',function() {
 cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
 cy.get('.search-keyword').type('ca')
 cy.wait(2000)
+console.log("Code added")
 //selenium get hit url in browser, cypress get acts like findElement of selenium
 cy.get('.product').should('have.length',5)
 cy.get('.product:visible').should('have.length',4)
@@ -19,6 +20,7 @@ cy.get(':nth-child(3) > .product-action > button').click()
 cy.get('@productLocator').find('.product').eq(2).contains('ADD TO CART').click().then(function()
 {
     console.log('sf')
+    1234
 })
 
 cy.get('@productLocator').find('.product').each(($el, index, $list) => {
