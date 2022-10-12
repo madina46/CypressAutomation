@@ -2,11 +2,15 @@
 
 describe('My First Test Suite', function() 
 {
+    beforeEach(() => {
+        cy.visit("https://color.a11y.com/?wc3");
+        cy.injectAxe();
+      });
 
 it('My FirstTest case',function() {
 
 
-cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
+// cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
 cy.get('.search-keyword').type('ca')
 cy.wait(2000)
 //selenium get hit url in browser, cypress get acts like findElement of selenium
@@ -46,6 +50,9 @@ cy.get('.brand').then(function(logoelement)
 
 
 
+it("Should have no accessibility violations",() => {
+    cy.checkA11y();
+  });
 
 
 
